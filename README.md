@@ -1,1 +1,3 @@
-# Kogane.CheckBoxWindow
+# Kogane Check Box Window
+
+チェックボックス付きのリスト
