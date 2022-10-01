@@ -43,7 +43,26 @@ namespace Kogane.Internal
                 CreateGUIStyle( new Color32( 56, 56, 56, 255 ) ),
             };
 
-            m_filteringText = m_searchField.OnToolbarGUI( m_filteringText );
+            using ( new EditorGUILayout.HorizontalScope() )
+            {
+                if ( GUILayout.Button( "Select all", GUILayout.Width( 80 ) ) )
+                {
+                    foreach ( var x in m_dataList )
+                    {
+                        x.IsChecked = true;
+                    }
+                }
+
+                if ( GUILayout.Button( "Deselect all", GUILayout.Width( 80 ) ) )
+                {
+                    foreach ( var x in m_dataList )
+                    {
+                        x.IsChecked = false;
+                    }
+                }
+
+                m_filteringText = m_searchField.OnToolbarGUI( m_filteringText );
+            }
 
             using ( var scrollViewScope = new EditorGUILayout.ScrollViewScope( m_scrollPosition ) )
             {
