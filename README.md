@@ -1,6 +1,6 @@
 # Kogane Check Box Window
 
-チェックボックス付きのリスト
+チェックボックス付きのリストで項目を複数選択できる EditorWindow
 
 ## 使用例
 
