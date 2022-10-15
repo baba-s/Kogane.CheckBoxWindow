@@ -26,7 +26,7 @@ namespace Kogane.Internal
             Action<IReadOnlyList<ICheckBoxWindowData>> onOk
         )
         {
-            titleContent   = new GUIContent( title );
+            titleContent   = new( title );
             wantsMouseMove = true;
             m_dataList     = dataList;
             m_onOk         = onOk;
@@ -34,7 +34,7 @@ namespace Kogane.Internal
 
         private void OnGUI()
         {
-            m_searchField ??= new SearchField();
+            m_searchField ??= new();
             m_hoverStyle  ??= CreateGUIStyle( new Color32( 44, 93, 135, 255 ) );
 
             m_alternatingRowStyleArray ??= new[]
